@@ -7,7 +7,16 @@ export const getProgressionNum = () => {
   array.push(start)
 
   let valueLength = getRandomNum()
-  let length = valueLength < 5 ? 5 : valueLength > 10 ? 10 : valueLength
+  let length
+  if (valueLength < 5) {
+    length = 5
+  }
+  else if (valueLength > 10) {
+    length = 10
+  }
+  else {
+    length = valueLength
+  }
 
   for (let i = 1; i < length; i++) {
     let index = i

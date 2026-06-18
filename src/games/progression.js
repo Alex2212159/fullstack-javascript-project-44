@@ -14,7 +14,7 @@ export const getProgressionNum = () => {
     let currentElement = start + index * step
     array.push(currentElement)
   }
-  const indexRandom = Math.floor(Math.random() * array.length)
+  const indexRandom = Math.floor(Math.random() * array.length) // NOSONAR
 
   let answer = array[indexRandom]
   array[indexRandom] = '..'

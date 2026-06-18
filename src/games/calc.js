@@ -1,7 +1,7 @@
 import getRandomNum from '../random-num.js'
 export const getExpression = () => {
   const operation = ['+', '-', '*']
-  const index = Math.floor(Math.random() * operation.length)
+  const index = Math.floor(Math.random() * operation.length) // NOSONAR
   let result
   let a = getRandomNum()
   let b = getRandomNum()

@@ -24,3 +24,14 @@
 ```bash
 make install
 ```
+
+## Run game
+
+```bash
+brain-games
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```

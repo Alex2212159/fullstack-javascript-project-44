@@ -7,3 +7,20 @@
 [![asciicast](https://asciinema.org/a/unSeISBbvyoMMxYq.svg)](https://asciinema.org/a/unSeISBbvyoMMxYq)
 [![asciicast](https://asciinema.org/a/F6Vtz4um6MbvEFIj.svg)](https://asciinema.org/a/F6Vtz4um6MbvEFIj)
 [![asciicast](https://asciinema.org/a/D2EVn4fsVHiQpuYw.svg)](https://asciinema.org/a/D2EVn4fsVHiQpuYw)
+
+## Requirements
+
+* Unix system (Macos/Linux)
+* Nodejs 22.x+
+* Make
+
+## Description
+
+* Javascript (nodejs)
+* Eslint
+
+## Setup
+
+```bash
+make install
+```

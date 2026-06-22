@@ -1,29 +1,20 @@
 import getRandomNum from '../random-num.js'
+import getBaseGame from '../index.js'
 
-export const getProgressionNum = () => {
+const rule = 'What number is missing in the progression?'
+
+const getRoundGame = () => {
   const start = getRandomNum()
   const step = getRandomNum()
   const array = []
   array.push(start)
-
-  let valueLength = getRandomNum()
-  let length
-  if (valueLength < 5) {
-    length = 5
-  }
-  else if (valueLength > 10) {
-    length = 10
-  }
-  else {
-    length = valueLength
-  }
-
+  let length = getRandomNum(5, 11)
   for (let i = 1; i < length; i++) {
     let index = i
     let currentElement = start + index * step
     array.push(currentElement)
   }
-  const indexRandom = Math.floor(Math.random() * array.length) // NOSONAR
+  const indexRandom = getRandomNum(0, array.length) // NOSONAR
 
   let answer = array[indexRandom]
   array[indexRandom] = '..'
@@ -34,4 +25,6 @@ export const getProgressionNum = () => {
   }
 }
 
-export const rules = 'What number is missing in the progression?'
+export const getProgressionNum = () => {
+  return getBaseGame(rule, getRoundGame)
+}

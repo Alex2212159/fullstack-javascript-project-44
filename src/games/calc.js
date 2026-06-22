@@ -1,7 +1,11 @@
 import getRandomNum from '../random-num.js'
-export const getExpression = () => {
+import getBaseGame from '../index.js'
+
+const rule = 'What is the result of the expression?'
+
+const getRoundGame = () => {
   const operation = ['+', '-', '*']
-  const index = Math.floor(Math.random() * operation.length) // NOSONAR
+  const index = getRandomNum(0, operation.length) // NOSONAR
   let result
   let a = getRandomNum()
   let b = getRandomNum()
@@ -25,4 +29,6 @@ export const getExpression = () => {
   }
 }
 
-export const userRule = 'What is the result of the expression?'
+export const getExpression = () => {
+  return getBaseGame(rule, getRoundGame)
+}

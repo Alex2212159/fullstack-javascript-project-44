@@ -1,6 +1,8 @@
 import getRandomNum from '../random-num.js'
+import getBaseGame from '../index.js'
 
-export const getDivisor = () => {
+const rule = 'Find the greatest common divisor of given numbers.'
+const getRaundGame = () => {
   let num1 = Math.abs(getRandomNum())
   let num2 = Math.abs(getRandomNum())
   let obj = {
@@ -14,4 +16,7 @@ export const getDivisor = () => {
   obj.correctAnswer = num1
   return obj
 }
-export const rules = 'Find the greatest common divisor of given numbers.'
+
+export const getDivisor = () => {
+  return getBaseGame(rule, getRaundGame)
+}

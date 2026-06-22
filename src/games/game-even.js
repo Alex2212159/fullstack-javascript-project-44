@@ -1,7 +1,13 @@
-import isEvenNumber from '../check-even.js'
 import getRandomNum from '../random-num.js'
+import getBaseGame from '../index.js'
 
-export const funcGame = () => {
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+const isEvenNumber = (number) => {
+  return number % 2 === 0
+}
+
+export const getRoundGame = () => {
   const expration = getRandomNum()
   const result = isEvenNumber(expration) ? 'yes' : 'no'
   return {
@@ -9,5 +15,6 @@ export const funcGame = () => {
     correctAnswer: result,
   }
 }
-
-export const rule = 'Answer "yes" if the number is even, otherwise answer "no".'
+export const funcGame = () => {
+  return getBaseGame(rule, getRoundGame)
+}
